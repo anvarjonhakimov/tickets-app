@@ -1,0 +1,88 @@
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+
+  > .left-side {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    width: 25%;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 6px;
+    box-shadow: 0 0 10px #E3EAF0;
+
+    > div:nth-child(1) {
+      margin-bottom: 3rem;
+    }
+
+    .currency-buttons, .filter-checkboxes {
+      display: flex;
+    }
+
+    .currency-buttons {
+      margin-bottom: 3rem;
+    }
+
+    .filter-checkboxes {
+      flex-direction: column;
+    }
+  }
+
+  > .main {
+    width: 60%;
+    padding-left: 2rem;
+
+    .ticket {
+      display: flex;
+      align-items: center;
+      height: 120px;
+      background-color: #ffffff;
+      margin-bottom: 2rem;
+      padding: 2rem;
+      border-radius: 6px;
+      box-shadow: 0 0 10px #E3EAF0;
+
+      > .carrier {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 30%;
+        border-right: 1px solid #E2E4E5;
+        padding-right: 2rem;
+      }
+
+      > .flight-details {
+        display: flex;
+        align-self: flex-start;
+        width: 70%;
+        margin-left: 2rem;
+
+        > .origin, .destination {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+        }
+
+        > .stops {
+          display: flex;
+          justify-content: center;
+          flex: 1;
+          color: #9FA6A9;
+          padding-top: .5rem;
+        }
+
+        .time {
+          font-size: 40px;
+          margin-bottom: .5rem;
+        }
+
+        .date {
+          color: #9FA6A9;
+          margin-top: .25rem;
+        }
+      }
+    }
+  }
+}

@@ -5,8 +5,16 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class StopsDeclensionPipe implements PipeTransform {
 
-  transform(value: any, ...args: any[]): any {
-    return null;
+  transform(value: number): any {
+    if (value === 0) {
+      return 'без пересадок';
+    } else if (value === 1) {
+      return `${value} пересадка`;
+    } else if (value > 1 && value < 5) {
+      return `${value} пересадки`;
+    } else {
+      return `${value} пересадок`;
+    }
   }
 
 }
